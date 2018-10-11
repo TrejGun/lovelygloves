@@ -1,0 +1,15 @@
+{
+    "name": "lovely_gloves",
+    "services": [
+        {
+            "type": "endpoint",
+            "name": "development",
+            "endpoint": "https://lovelygloves.purimotors.com/api/messages",
+            "appId": "1d28eae1-f708-486f-9e4b-701c2a5beeee",
+            "appPassword": "ujaZZW221-xlzrGXII31-:=",
+            "id": "1"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0"
+}

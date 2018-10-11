@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "name": "LovelyGlovesBot",
+      "watch": [
+        "."
+      ],
+      "cwd": ".",
+      "script": "index.js",
+      "exec_interpreter": "node_modules/.bin/babel-node",
+      "exec_mode": "fork",
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": "3978",
+        "microsoftAppID": "1d28eae1-f708-486f-9e4b-701c2a5beeee",
+        "microsoftAppPassword": "ujaZZW221-xlzrGXII31-:="
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    [
+      "@babel/proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
+  ],
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false
+  },
+  "extends": [
+    "standard"
+  ],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "comma-dangle": [2, "always-multiline"],
+    "object-curly-spacing": [0, "always"],
+    "semi": [2, "always"]
+  }
+}
