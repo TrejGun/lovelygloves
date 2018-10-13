@@ -151,12 +151,12 @@ export default class WelcomeBot {
       }],
       items: [{
         title: `Lovely Gloves (${color.value})`,
-        price: `${price}₴`,
+        price: price,
         quantity,
         image: {url: 'https://lovelygloves.com.ua/img/10536262_2560/image.jpg'},
       }],
       tax: '0',
-      total: `${price * quantity}₴`,
+      total: price * quantity,
     });
   }
 }
