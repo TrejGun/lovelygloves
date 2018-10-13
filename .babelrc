@@ -7,6 +7,7 @@
       }
     ],
     "@babel/proposal-class-properties",
+    "@babel/proposal-function-bind",
     "@babel/proposal-object-rest-spread"
   ],
   "presets": [

@@ -2,8 +2,9 @@
   "name": "lovely_gloves_bot",
   "version": "1.0.0",
   "description": "Bot Builder v4",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
+    "build": "NODE_ENV=${NODE_ENV:=production} ./build.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node_modules/.bin/pm2 start ecosystem.development.json",
     "stop": "pm2 stop --watch all; pm2 delete all;"
@@ -12,8 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "botbuilder": "^4.0.6",
-    "botframework-config": "^4.0.6",
-    "dotenv": "^6.0.0",
+    "botbuilder-dialogs": "^4.0.6",
     "restify": "^6.3.4"
   },
   "devDependencies": {
@@ -22,6 +22,7 @@
     "@babel/node": "7.0.0",
     "@babel/plugin-proposal-class-properties": "7.1.0",
     "@babel/plugin-proposal-decorators": "7.1.0",
+    "@babel/plugin-proposal-function-bind": "7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "7.0.0",
     "@babel/preset-env": "7.1.0",
     "babel-eslint": "10.0.0",
