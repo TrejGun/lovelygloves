@@ -67,7 +67,9 @@ export default class WelcomeBot {
     // Each "slot" in the SlotFillingDialog is represented by a field in step.result.values.
     // The complex that contain subfields have their own .values field containing the sub-values.
 
-    await step.context.sendActivity({attachments: [this.createReceiptCard(step.result.values)]});
+    const {color, fullname, city, warehouse} = step.result.values;
+    await step.context.sendActivity(`Ваш заказ 'Перчатки Lovely Gloves (цвет ${color.value})' принят в обработку и будет доставлен в отделение Новой Почты №${warehouse} города ${city}, получатель ${fullname}`);
+    // await step.context.sendActivity({attachments: [this.createReceiptCard(step.result.values)]});
 
     return step.endDialog();
   }
@@ -151,12 +153,12 @@ export default class WelcomeBot {
       }],
       items: [{
         title: `Lovely Gloves (${color.value})`,
-        price: price,
+        price: `${price}₴`,
         quantity,
         image: {url: 'https://lovelygloves.com.ua/img/10536262_2560/image.jpg'},
       }],
       tax: '0',
-      total: price * quantity,
+      total: `${price * quantity}₴`,
     });
   }
 }
