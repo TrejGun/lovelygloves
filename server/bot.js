@@ -131,8 +131,7 @@ export default class WelcomeBot {
     // (and only the first time) a user initiates a personal chat with your bot.
     if (didBotWelcomedUser === false) {
       // The channel should send the user name in the 'From' object
-      let userName = turnContext.activity.from.name;
-      await turnContext.sendActivity(`Привет ${userName}. Я - робот, который поможет Вам сделать заказ. Напишите что-нибудь, если хотите продолжить. Напишите 'отмена', что бы начать с начала.`);
+      await turnContext.sendActivity(`Привет, я - робот, который поможет вам сделать заказ. Напишите что-нибудь, если хотите продолжить. Напишите 'отмена', что бы начать с начала.`);
 
       // Set the flag indicating the bot handled the user's first message.
       await this.welcomedUserProperty.set(turnContext, true);
