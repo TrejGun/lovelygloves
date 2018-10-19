@@ -142,6 +142,9 @@ export default class WelcomeBot {
     return CardFactory.receiptCard({
       title: fullname,
       facts: [{
+        key: 'Order Number',
+        value: `${Math.random().toString(36).substr(5)}`,
+      }, {
         key: 'Город',
         value: city,
       }, {
